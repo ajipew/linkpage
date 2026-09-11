@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   Theme variables — mirrors config/theme.config.ts
+   so both server-rendered CSS and Tailwind utilities
+   stay in sync. Change theme.config.ts, not here.
+───────────────────────────────────────────── */
+:root {
+  --color-primary: #65d6ad;
+  --color-secondary: #171717;
+  --color-accent: #d9e7e0;
+  --color-background: #f7f7f3;
+  --color-surface: #ffffff;
+  --color-text: #171717;
+  --color-button-bg: #ffffff;
+  --color-button-text: #171717;
+
+  --font-heading: "Poppins", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  --radius-button: 16px;
+}
+
+.dark {
+  --color-primary: #65d6ad;
+  --color-secondary: #f7f7f3;
+  --color-accent: #2a2a2a;
+  --color-background: #121212;
+  --color-surface: #1c1c1c;
+  --color-text: #f7f7f3;
+  --color-button-bg: #1c1c1c;
+  --color-button-text: #f7f7f3;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Subtle brand-inspired gradient background (background-style: "gradient") */
+.bg-brand-gradient {
+  background-image:
+    radial-gradient(circle at 15% 10%, color-mix(in srgb, var(--color-primary) 18%, transparent) 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--color-primary) 14%, transparent) 0%, transparent 50%);
+}
+
+/* Minimal geometric/pixel-dot pattern (background-style: "pattern") */
+.bg-brand-pattern {
+  background-image: radial-gradient(color-mix(in srgb, var(--color-secondary) 8%, transparent) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
