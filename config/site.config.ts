@@ -95,7 +95,7 @@ export const siteConfig: SiteConfig = {
     {
       id: "facebook",
       title: "Facebook",
-      url: "https://facebook.com/example", // PLACEHOLDER
+      url: "https://www.facebook.com/profile.php?id=61594012509992", // PLACEHOLDER
       icon: "facebook",
       enabled: true,
       newTab: true,
